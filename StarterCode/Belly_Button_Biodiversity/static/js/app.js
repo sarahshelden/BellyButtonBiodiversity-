@@ -24,24 +24,24 @@ function buildMetadata(sample) {
 
        Object.entries(sample).forEach(function ([key, value]) {
            var row = panel.append("panel-body");
-           row.text(`{key}: ${value} \n`);
-
         });
 });
 
 function buildCharts(sample) {
 
   // @TODO: Use `d3.json` to fetch the sample data for the plots
+   // @TODO: Build a Bubble Chart using the sample data
+    // @TODO: Build a Pie Chart
+    // HINT: You will need to use slice() to grab the top 10 sample_values,
+    // otu_ids, and labels (10 each).
+
 
   var url = `/sample/${sample}`;
   d3.json(url).then(function(sample) {
 
   })
 }
-    // @TODO: Build a Bubble Chart using the sample data
-    // @TODO: Build a Pie Chart
-    // HINT: You will need to use slice() to grab the top 10 sample_values,
-    // otu_ids, and labels (10 each).
+ 
 }
 
 function init() {
